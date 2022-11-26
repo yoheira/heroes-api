@@ -5,9 +5,7 @@ spring:
   # Database
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/heroes_db
-    username: postgres
-    password: 
+    url: ${DATABASE_URL:jdbc:postgresql://postgres:@localhost:5432/heroes_db} 
   # JPA properties
   jpa:
     hibernate:
